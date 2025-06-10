@@ -14,7 +14,7 @@ h1.innerText = "EPIBlog" // ...ma potete anche sovrascriverne il contenuto!
 const navs = document.getElementsByTagName("nav") // TUTTI i <nav> della pagina
 navs[0].innerHTML += '<a href="#">Cantautori</a>'
 // sarebbe come dire
-// navs[0].innerHTML = navs[0].innerHTML + '<a href="#">Cantautori</a>'
+// navs[0].innerHTML = navs[0].innerHTML + '<a href="#">Cantautori</a>' js
 // gli elementi generati "a mano" tramite JS ereditano tutte le proprietà CSS
 // che avrebbero ricevuto anche se fossero stati generati inizialmente via HTML
 
