@@ -88,6 +88,7 @@
         const h1 = document.querySelector("h1")
         console.log(`changeTitle`, h1)
         h1.style.color = `red`
+        h1.innerText = `New Title!`
       }
 
       changeTitle()
@@ -172,30 +173,29 @@
 
       const paintItGreen = function () {
         const backgroundColorList = document.querySelectorAll(`body ul`)
-        for (let i = 0; i < backgroundColorList.length; i++)
-          backgroundColorList[0].style.backgroundColor = `green`
+        for (let i = 0; i < backgroundColorList.length; i++) {
+          backgroundColorList[i].style.backgroundColor = `green`
+        }
       }
 
       paintItGreen()
 
-      /* ESERCIZIO 9 - NO
+      /* ESERCIZIO 9 - OK
                Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
               */
 
       const makeItClickable = function () {
         const removeLetters = document.querySelector(`h1`)
-        removeLetters.remove() = h1.length -1
+        removeLetters.innerHTML = removeLetters.innerHTML.slice(0, -1)
       }
 
-      /* ESERCIZIO 10 - NO
+      /* ESERCIZIO 10 - OK
                Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
               */
 
       const revealFooterLink = function () {
-        const alertLink = document.querySelector(`footer`)
-        alertLink.alert(
-          `https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting`
-        )
+        const alertLink = document.querySelector(`footer a`)
+        alert(alertLink.getAttribute(`href`))
       }
 
       /* ESERCIZIO 11 -
